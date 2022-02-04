@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { ethers, waffle } from "hardhat";
 import { StonedCookies } from "../typechain/StonedCookies";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import { BigNumber } from "ethers";
+import { BigNumber, ContractTransaction } from "ethers";
 import crypto from "crypto";
 import { parseEther } from "ethers/lib/utils";
 
@@ -153,6 +153,26 @@ describe("StonedCookies", () => {
       expect(txReceipt).not.to.be.null;
       value = price.mul(21);
       expect(contract.mint(owner, 21, { value })).to.reverted;
+    });
+
+    it("should not be able to mint more than total supply", async () => {
+      for (
+        let i = 0;
+        i < (await contract.totalSupply()).toNumber() - 1;
+        i += 1
+      ) {
+        contract.mint(owner, BigNumber.from("1"), {
+          value: parseEther("0.024"),
+        });
+      }
+      expect(await contract.currentTokenId()).to.eq(
+        (await contract.totalSupply()).sub(1),
+      );
+      await expect(
+        contract.mint(owner, BigNumber.from("1"), {
+          value: parseEther("0.024"),
+        }),
+      ).to.revertedWith("All tokens have been minted");
     });
 
     describe("toggling", () => {

@@ -51,7 +51,7 @@ contract StonedCookies is Ownable, ERC721("StonedCookies", "STC"), ContextMixin,
         require(_quantity < 21, "Maximum mint in single transaction is 20");
         uint256 totalCost = _quantity.mul(mintPrice);
         require(msg.value >= totalCost, "Not enough ETH sent; check price!");
-        require(currentTokenId.add(1).add(_quantity) < totalSupply, "All tokens have been minted");
+        require(currentTokenId.add(_quantity) < totalSupply, "All tokens have been minted");
         for (uint256 i = 0; i < _quantity; i += 1) {
             uint256 newTokenId = _getNextTokenId();
             _safeMint(_to, newTokenId);
