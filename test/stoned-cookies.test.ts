@@ -156,15 +156,20 @@ describe("StonedCookies", () => {
     });
 
     it("should not be able to mint more than total supply", async () => {
+      const promises = Array<Promise<ContractTransaction>>();
       for (
         let i = 0;
         i < (await contract.totalSupply()).toNumber() - 1;
         i += 1
       ) {
-        contract.mint(owner, BigNumber.from("1"), {
-          value: parseEther("0.024"),
-        });
+        promises.push(
+          contract.mint(owner, BigNumber.from("1"), {
+            value: parseEther("0.024"),
+          }),
+        );
       }
+      const waits = await Promise.all(promises);
+      await Promise.all(waits.map(wait => wait.wait()));
       expect(await contract.currentTokenId()).to.eq(
         (await contract.totalSupply()).sub(1),
       );
