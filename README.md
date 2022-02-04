@@ -14,7 +14,7 @@
     <img src="https://github.com/piotrostr/stoned-cookies-nft/actions/workflows/main.yml/badge.svg" />
   </a>
   <a href="https://codecov.io/gh/piotrostr/stoned-cookies-nft">
-    <img src="https://codecov.io/gh/piotrostr/stoned-cookies-nft/branch/main/graph/badge.svg?token=WYLQ5B7UGC" alt="coverage-status" />
+    <img src="https://codecov.io/gh/piotrostr/stoned-cookies-nft/branch/main/graph/badge.svg?token=QVIeobs3OL"/>
   </a>
   <a href="https://www.codefactor.io/repository/github/piotrostr/stoned-cookies-nft">
     <img src="https://www.codefactor.io/repository/github/piotrostr/stoned-cookies-nft/badge" alt="CodeFactor" />
