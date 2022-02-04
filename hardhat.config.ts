@@ -56,6 +56,9 @@ const config: HardhatUserConfig = {
     src: "./contracts",
   },
   etherscan: { apiKey: process.env.ETHERSCAN_KEY },
+  mocha: {
+    timeout: 10000000,
+  },
 };
 
 export default config;
