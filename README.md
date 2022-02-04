@@ -1,46 +1,25 @@
-# Advanced Sample Hardhat Project
-
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
-
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
-
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/sample-script.ts
-```
-
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
-
-# Performance optimizations
-
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+<h1 align="center">
+  Stoned Cookies
+</h1>
+<br />
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/63755291/152590613-341cd434-db2f-45b1-a970-3c47e0ed4323.png" alt="img" />
+</div>
+<br />
+<div align="center">
+  <a href="https://github.com/piotrostr/stoned-cookies-nft/blob/HEAD/MIT">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="mit" />
+  </a>
+  <a href="">
+    <img src="https://github.com/piotrostr/stoned-cookies-nft/actions/workflows/main.yml/badge.svg" />
+  </a>
+  <a href="https://codecov.io/gh/piotrostr/stoned-cookies-nft">
+    <img src="https://codecov.io/gh/piotrostr/stoned-cookies-nft/branch/main/graph/badge.svg?token=WYLQ5B7UGC" alt="coverage-status" />
+  </a>
+  <a href="https://www.codefactor.io/repository/github/piotrostr/stoned-cookies-nft/overview/main">
+    <img src="https://www.codefactor.io/repository/github/piotrostr/stoned-cookies-nft/badge/main" alt="CodeFactor" />
+  </a>
+  <a href="https://en.cryptobadges.io/donate/0xb7ADAd5f58aD063E1a8f174C61777b66872C8b65">
+    <img src="https://camo.githubusercontent.com/e96ba7a90d666c76a314e022e072252435a4b271d63b5959e0d4cd7fdbb1032e/68747470733a2f2f656e2e63727970746f6261646765732e696f2f62616467652f6d6963726f2f307865386364663032656664386162306134393064376232636231333535333338396339626339333265" alt="donate-eth" />
+  </a>
+</div>
