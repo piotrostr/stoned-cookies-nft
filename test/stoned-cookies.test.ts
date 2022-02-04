@@ -123,6 +123,15 @@ describe("StonedCookies", () => {
       expect(initialBalance.add(quantity)).to.equal(postMintBalance);
     });
 
+    it("shouldn't be able to mint for not enough eth", async () => {
+      const quantity = ethers.BigNumber.from("1");
+      await expect(
+        contract.mint(owner, quantity, {
+          value: parseEther("0.01"),
+        }),
+      ).to.reverted;
+    });
+
     it("should be able to mint multiple", async () => {
       const quantity = ethers.BigNumber.from("5");
       const price = await contract.mintPrice();
