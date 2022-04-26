@@ -7,7 +7,7 @@
 </div>
 <br />
 <div align="center">
-  <a href="https://github.com/piotrostr/stoned-cookies-nft/blob/HEAD/MIT">
+  <a href="https://github.com/piotrostr/stoned-cookies-nft/blob/HEAD/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="mit" />
   </a>
   <a href="https://github.com/piotrostr/stoned-cookies-nft/actions/workflows/main.yml">
